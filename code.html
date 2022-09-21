@@ -47,9 +47,7 @@
                  <li class="nav-item">
                      <a class="nav-link" href="#">The Repo</a>
                  </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="#">About</a>
-                 </li>
+                 
                 </ul>
             </div>
         </div>
@@ -62,29 +60,46 @@
                         <code class="language-javascript">
 
                             function getValue(){
-                                alert("Hello World")
+                                let message = document.getElementById("message").value;
+                               let revMessage = reverse(message);
+                               displayReversed(revMessage);
                             }
-                            function getValue2(){
-                                let msg= '';
-                                msg=document.getElementById("message").value;
                             
-                                Swal.fire(
-                                   { backdrop: false,
-                                    title: 'App Name',
-                                    text: msg,
-                                   }
-                                );
+                            
+                            
+                            
+                            function reverse(message){
+                            //string? array of characters
+                            let reversedMessage = "";
+                            for (let index = message.length-1; index >= 0; index--) {
+                                
+                               reversedMessage += message[index];
+                                
+                            }
+                            
+                            return reversedMessage;
+                            }
+                            
+                            
+                            
+                            function displayReversed(revMessage){
+                                let results = document.getElementById("results");
+                                results.classList.add("revMessage");
+                                results.innerHTML = revMessage;
+                            
                             }
 
                         </code>
                     </pre>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <p class="fw-bold">The Code is structured in two functions</p>
+                    <p class="fw-bold">The Code is structured in three functions</p>
                     <h5>getValue</h5>
-                    <p>Displays an alert to the page</p>
-                    <h5>getValue2</h5>
-                    <p>Displays a user entereed message in a sweet alerts window</p>
+                    <p>Retrieves the message </p>
+                    <h5>reverse</h5>
+                    <p>Uses a forloop to reverse the letters in the sequence.</p>
+                    <h5>displayReversed</h5>
+                    <p>Grabs the result of the forloop and displays revMessage.</p>
                 </div>
             </div>
         </div>

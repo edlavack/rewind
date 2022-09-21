@@ -6,7 +6,7 @@ function getValue(){
 
 
 
-//business
+
 function reverse(message){
 //string? array of characters
 let reversedMessage = "";
