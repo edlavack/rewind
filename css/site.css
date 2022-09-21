@@ -1,8 +1,8 @@
 :root{
---edl-primary-color: #050557;
---edl-secondary-color: #DB0066;
---edl-dark-color: #D97E07;
---edl-light-color: #FFD521;
+--edl-primary-color: #1F4C73;
+--edl-secondary-color: #D9601A;
+--edl-dark-color: #D98D62;
+--edl-light-color: #F2AE30;
 --edl-nav-toggler-glow: rgba(221, 218, 19, 0.35);
 }
 
