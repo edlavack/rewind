@@ -1,14 +1,29 @@
 function getValue(){
-    alert("Hello World")
+    let message = document.getElementById("message").value;
+   let revMessage = reverse(message);
+   displayReversed(revMessage);
 }
-function getValue2(){
-    let msg= '';
-    msg=document.getElementById("message").value;
 
-    Swal.fire(
-       { backdrop: false,
-        title: 'App Name',
-        text: msg,
-       }
-    );
+
+
+//business
+function reverse(message){
+//string? array of characters
+let reversedMessage = "";
+for (let index = message.length-1; index >= 0; index--) {
+    
+   reversedMessage += message[index];
+    
+}
+
+return reversedMessage;
+}
+
+
+
+function displayReversed(revMessage){
+    let results = document.getElementById("results");
+    results.classList.add("revMessage");
+    results.innerHTML = revMessage;
+
 }
